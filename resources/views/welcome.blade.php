@@ -371,21 +371,41 @@
                        <center> <strong>Send Message</strong> </center>
                     </h6>
                     <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <form>
+                    <form class="form-group" action="/" method="POST">
+                        @csrf
                         <div class="form-group">
-                          <label for="exampleFormControlInput1">Name</label>
-                          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
+                         
+                          <input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="Your Name">
+                          @error('name')
+                          <div class="alert alert-danger mt-2">
+                              {{ $message }}
+                          </div>
+                      @enderror  
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Phone</label>
+                           
                             <input type="tel" class="form-control"  placeholder="08123456789" name="phone">
+                            @error('phone')
+                            <div class="alert alert-danger mt-2">
+                                {{ $message }}
+                            </div>
+                        @enderror  
                           </div>
                           <div class="form-group">
-                            <label for="exampleFormControlInput1">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
+                            @error('email')
+                            <div class="alert alert-danger mt-2">
+                                {{ $message }}
+                            </div>
+                        @enderror  
+                        </div>
+                        <div class="form-group">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="3"></textarea>
+                          @error('message')
+                          <div class="alert alert-danger mt-2">
+                              {{ $message }}
                           </div>
-                        <div class="form-group">Your Message</label>
-                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      @enderror  
                         </div>
                         <button type="submit"  class="btn btn-primary ">Submit</button>
                       </form>

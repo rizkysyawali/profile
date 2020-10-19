@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ProfileController@home');
+Route::post('/', 'ProfileController@store');
+
+
+Route::get('/pro-admin', 'ProfileController@admin');
+
+Route::delete('/pro-admin/{id}', 'ProfileController@destroy');
