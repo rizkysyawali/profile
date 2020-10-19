@@ -1,0 +1,173 @@
+/* ----------------  */
+html,
+body,
+header,
+#intro {
+    background-color: #fff;
+    color: #020507;
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+#intro {
+    background: url("/images/key.jpg")no-repeat center center fixed;
+    background-size: cover;
+
+}
+
+i {
+    color: #177cc0;
+}
+
+p,
+label {
+    color: rgb(25, 12, 78);
+    font-size: 17px;
+
+}
+
+nav {
+
+    transition: all 0.5s;
+}
+
+nav.container ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background: rgb(255, 254, 254);
+    height: 2px;
+}
+
+
+
+.container .navbar-brand {
+    text-shadow: 2px 2px 5px blue;
+}
+
+.container .navbar-brand:hover {
+    font-size: 22px;
+    transition: all .5s;
+}
+
+ul .nav-item a {
+    color: white !important;
+    text-shadow: 2px 2px 5px blue;
+
+}
+
+ul .nav-item a:hover {
+    color: grey !important;
+    text-shadow: 2px 2px 5px blue;
+
+}
+
+.sticky {
+    padding: 0px 0;
+    background-color: rgba(12, 6, 39);
+    padding: 30px 100px;
+    box-shadow: 0 50px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sticky .container {
+    padding: 5px 0;
+}
+
+/* menu hover animation */
+nav.navbar ul li a {
+    position: relative;
+}
+
+nav.navbar ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background: rgb(255, 255, 255);
+    height: 2px;
+}
+
+nav.navbar ul li a:hover:after {
+    width: 100%;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+
+/*end of menu hover animation */
+
+.full-height {
+    position: absolute;
+    color: #fff;
+    top: 14em;
+    margin-top: -1.5em;
+    text-shadow: 2px 2px 5px blue;
+
+}
+
+.full-height h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.full-height h4 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.full-height h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.pd-title {
+    padding-top: 100px;
+    color: rgb(25, 12, 78) !important;
+
+}
+
+.footer-bottom {
+    background-color: rgb(12, 6, 39);
+}
+
+#best-feature h2 {
+    margin-top: 50px;
+}
+
+/* progress bar */
+.h-5 {
+    height: 40px !important;
+}
+
+/* end of progress bar */
+
+textarea {
+    width: 100px;
+    height: 100px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background-color: rgb(12, 6, 39);
+    }
+
+    .full-height h2,
+    .full-height h1,
+    .full-height h4 {
+        font-size: 2em;
+    }
+}
